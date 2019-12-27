@@ -11,11 +11,7 @@
 #ifndef __SYNC_H__
 #define __SYNC_H__
 
-#ifdef _WIN32
-#include "sync_w32.h"    
-#else // Unix
-#include "sync_unix.h"
-#endif
+#include "osdep/sync.h"    
 
 BEGIN_FASTDB_NAMESPACE
 
