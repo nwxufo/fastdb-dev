@@ -1,0 +1,3 @@
+
+./configure CPPFLAGS=-std=c++98 --enable-debug  
+
