@@ -251,7 +251,6 @@ pkginclude_HEADERS = \
    ${top_srcdir}/inc/rtree.h \
    ${top_srcdir}/inc/container.h \
    ${top_srcdir}/inc/sync.h \
-   ${top_srcdir}/inc/sync_unix.h \
    ${top_srcdir}/inc/query.h \
    ${top_srcdir}/inc/datetime.h \
    ${top_srcdir}/inc/harray.h \
