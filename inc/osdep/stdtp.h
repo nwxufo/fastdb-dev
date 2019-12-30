@@ -11,6 +11,9 @@
 #ifndef __STDTP_H__
 #define __STDTP_H__
 
+/*if remove this sentence directly, make reporting error messeages, so
+ * Something need to do.
+ */
 #include "config.h"
 
 #ifdef FASTDB_DLL
