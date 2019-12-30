@@ -8,7 +8,7 @@
 // Stub for CGI scripts 
 //-------------------------------------------------------------------*--------*
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "sockio.h"
 
 USE_FASTDB_NAMESPACE

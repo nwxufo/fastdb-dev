@@ -10,7 +10,7 @@
 
 #define INSIDE_FASTDB
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "w32sock.h"
 #include "sync.h"
 

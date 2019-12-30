@@ -10,7 +10,7 @@
 
 #define INSIDE_FASTDB
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "sync.h"
 #ifndef _WINCE
 #include <sys/stat.h>

@@ -11,7 +11,7 @@
 #ifndef __CLASS_H__
 #define __CLASS_H__
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "sync.h"
 #include "rectangle.h"
 

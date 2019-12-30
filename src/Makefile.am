@@ -2,7 +2,7 @@ INCLUDES = -I${top_srcdir}/inc
 
 pkginclude_HEADERS = \
    ${top_srcdir}/inc/fastdb.h \
-   ${top_srcdir}/inc/stdtp.h \
+   ${top_srcdir}/inc/osdep/stdtp.h \
    ${top_srcdir}/inc/config.h \
    ${top_srcdir}/inc/class.h \
    ${top_srcdir}/inc/database.h \
@@ -45,7 +45,7 @@ LIBSRC = \
    unisock.cpp \
    sync.cpp \
    localcli.cpp \
-   stdtp.cpp
+   osdep/stdtp.cpp
 
 if NO_PTHREADS
 else
@@ -56,7 +56,7 @@ endif
 libfastdb_la_SOURCES = $(LIBSRC)
 libfastdb_la_LDFLAGS = -version-info 2:0:0
 
-libcli_la_SOURCES = cli.cpp unisock.cpp repsock.cpp stdtp.cpp
+libcli_la_SOURCES = cli.cpp unisock.cpp repsock.cpp osdep/stdtp.cpp
 libcli_la_LDFLAGS = -version-info 2:0:0
 
 subsql_SOURCES = subsql.cpp

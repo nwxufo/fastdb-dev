@@ -11,7 +11,7 @@
 #ifndef __SOCKIO_H__
 #define __SOCKIO_H__
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 
 BEGIN_FASTDB_NAMESPACE
 

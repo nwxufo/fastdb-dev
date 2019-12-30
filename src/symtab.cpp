@@ -10,7 +10,7 @@
 
 #define INSIDE_FASTDB
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "sync.h"
 #include "symtab.h"
 

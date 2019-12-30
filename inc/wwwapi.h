@@ -11,7 +11,7 @@
 #ifndef __WWWAPI_H__
 #define __WWWAPI_H__
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "sync.h"
 #include "sockio.h"
 #include "database.h"

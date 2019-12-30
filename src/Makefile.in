@@ -59,7 +59,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" \
 libLTLIBRARIES_INSTALL = $(INSTALL)
 LTLIBRARIES = $(lib_LTLIBRARIES)
 libcli_la_LIBADD =
-am_libcli_la_OBJECTS = cli.lo unisock.lo repsock.lo stdtp.lo
+am_libcli_la_OBJECTS = cli.lo unisock.lo repsock.lo osdep/stdtp.lo
 libcli_la_OBJECTS = $(am_libcli_la_OBJECTS)
 libcli_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
@@ -68,11 +68,11 @@ libfastdb_la_LIBADD =
 am__libfastdb_la_SOURCES_DIST = class.cpp compiler.cpp database.cpp \
 	xml.cpp hashtab.cpp file.cpp symtab.cpp ttree.cpp rtree.cpp \
 	container.cpp cursor.cpp query.cpp wwwapi.cpp unisock.cpp \
-	sync.cpp localcli.cpp stdtp.cpp server.cpp
+	sync.cpp localcli.cpp osdep/stdtp.cpp server.cpp
 @NO_PTHREADS_FALSE@am__objects_1 = server.lo
 am__objects_2 = class.lo compiler.lo database.lo xml.lo hashtab.lo \
 	file.lo symtab.lo ttree.lo rtree.lo container.lo cursor.lo \
-	query.lo wwwapi.lo unisock.lo sync.lo localcli.lo stdtp.lo \
+	query.lo wwwapi.lo unisock.lo sync.lo localcli.lo osdep/stdtp.lo \
 	$(am__objects_1)
 am_libfastdb_la_OBJECTS = $(am__objects_2)
 libfastdb_la_OBJECTS = $(am_libfastdb_la_OBJECTS)
@@ -236,7 +236,7 @@ INCLUDES = -I${top_srcdir}/inc
 pkginclude_HEADERS = \
    ${top_srcdir}/inc/acconfig.h \
    ${top_srcdir}/inc/fastdb.h \
-   ${top_srcdir}/inc/stdtp.h \
+   ${top_srcdir}/inc/osdep/stdtp.h \
    ${top_srcdir}/inc/config.h \
    ${top_srcdir}/inc/class.h \
    ${top_srcdir}/inc/database.h \
@@ -262,10 +262,10 @@ lib_LTLIBRARIES = libfastdb.la libcli.la
 LIBSRC = class.cpp compiler.cpp database.cpp xml.cpp hashtab.cpp \
 	file.cpp symtab.cpp ttree.cpp rtree.cpp container.cpp \
 	cursor.cpp query.cpp wwwapi.cpp unisock.cpp sync.cpp \
-	localcli.cpp stdtp.cpp $(am__append_1)
+	localcli.cpp osdep/stdtp.cpp $(am__append_1)
 libfastdb_la_SOURCES = $(LIBSRC)
 libfastdb_la_LDFLAGS = -version-info 2:0:0
-libcli_la_SOURCES = cli.cpp unisock.cpp repsock.cpp stdtp.cpp
+libcli_la_SOURCES = cli.cpp unisock.cpp repsock.cpp osdep/stdtp.cpp
 libcli_la_LDFLAGS = -version-info 2:0:0
 subsql_SOURCES = subsql.cpp
 subsql_LDADD = ${builddir}/libfastdb.la
@@ -407,7 +407,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/repsock.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rtree.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/server.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/stdtp.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/osdep/stdtp.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/subsql.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/symtab.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sync.Plo@am__quote@

@@ -47,7 +47,7 @@ int ftruncate_shim_implementation(int fd, unsigned int size) {
 
 #define INSIDE_FASTDB
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "file.h"
 #include "database.h"
 

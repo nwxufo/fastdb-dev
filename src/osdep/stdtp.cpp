@@ -1,6 +1,6 @@
 #define INSIDE_FASTDB
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include <stdio.h>
 
 BEGIN_FASTDB_NAMESPACE

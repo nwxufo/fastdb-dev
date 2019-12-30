@@ -11,7 +11,7 @@
 #ifndef __DATETIME_H__
 #define __DATETIME_H__
 
-#include "stdtp.h"
+#include "osdep/stdtp.h"
 #include "class.h"
 
 BEGIN_FASTDB_NAMESPACE
