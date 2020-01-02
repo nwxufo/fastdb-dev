@@ -13,12 +13,10 @@
 
 #include "stdtp.h"
 #include "class.h"
+#include "osdep/date.h"
 
 BEGIN_FASTDB_NAMESPACE
 
-#if !defined(NO_PTHREADS) && !defined(_WIN32)
-#define USE_REENTRANT_LIBRARY
-#endif
 
 class FASTDB_DLL_ENTRY dbDate { 
     int4 jday;
@@ -57,13 +55,7 @@ class FASTDB_DLL_ENTRY dbDate {
     }
     static dbDate current() { 
         time_t now = time(NULL);
-        struct tm* tp;
-#ifdef USE_REENTRANT_LIBRARY
-        struct tm t;
-        tp = localtime_r(&now, &t);
-#else 
-        tp = localtime(&now);
-#endif
+        struct tm* tp = _getlocaltime(&now);
         return dbDate(tp->tm_year + 1900, tp->tm_mon + 1, tp->tm_mday);
     }
 
